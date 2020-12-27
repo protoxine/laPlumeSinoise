@@ -1,0 +1,285 @@
+@font-face{
+    font-family: "dancing";
+    src: url(./DancingScript-Regular.otf);
+}
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: "dancing", sans-serif;
+    font-size: 62.5%;
+}
+.btn{
+    display: block;
+    /* position: relative; */
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 2;
+}
+.span{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 2px;
+    background-color: white;
+    width: 100%;
+}
+.span::after, .span::before{
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    display: block;
+    background-color: white;
+}
+.span::after{
+    top: -6px;
+}
+.span::before{
+    top: 6px;
+}
+
+
+.overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.97);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+}
+
+.overlay a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus{
+    color: #f1f1f1;
+}
+
+.overlay .closebtn{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    background-image: url("./pexels-jeshootscom-834897.jpg");
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+}
+header h2{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+section{
+    background-image: url("./pexels-suzy-hazelwood-3631711.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 40px;
+    padding: 40px;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    background-attachment: fixed;
+}
+.div{
+    width: auto;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 4rem;
+    text-shadow: 3px 3px 3px rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 48px;
+    background: transparent;
+    border: 2px solid black;
+    box-shadow:  0px 10px 13px -7px #000000, 5px 5px 5px 4px rgba(0,0,0,0);
+}
+@media screen and (max-width: 900px){
+    .div{
+        font-size: 2rem;
+    }
+}
+
+.div p{
+    padding: 0 10px;
+}
+
+.destruct{
+    display: none;
+}
+
+.hideBox{
+    opacity: 0;
+}
+
+.div1{
+    grid-area: 1 / 1 / 2 / 2;
+}
+.div2{
+    grid-area: 1 / 2 / 2 / 3;
+    cursor: default;
+}
+.div3{
+    grid-area: 2 / 2 / 3 / 3;
+}
+.div4{
+    grid-area: 2 / 1 / 3 / 2;
+    cursor: default;
+
+}
+.div5{
+    grid-area: 3 / 1 / 4 / 2;
+}
+.div6{
+    grid-area: 3 / 2 / 4 / 3;
+    cursor: default;
+}
+
+h2{
+    font-size: 8rem;
+    transition: font-size .5s ease;
+
+}
+
+.animTxt{
+    position: fixed;
+    top: 25px;
+    font-size: 4rem;
+    border: 1px solid black;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,1);
+    z-index: 1;
+}
+
+footer{
+    background-image:url("./pexels-chepté-cormani-1416530.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+}
+footer div a{
+    color: white;
+    text-decoration: none;
+}
+
+.reseaux i{
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.text{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 4rem;
+    text-align: center;
+    overflow-x: hidden;
+}
+.text .closebtn{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+.text a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+
+i span{
+    position:absolute;
+    margin-top:23px;
+    margin-left:-35px;
+    color:#09c;
+    background:rgba(0,0,0,.9);
+    padding:15px;
+    border-radius:3px;
+    box-shadow:0 0 2px rgba(0,0,0,.5);
+    transform:scale(0) rotate(-12deg);
+    transition:all .25s;
+    opacity:0;
+    font-size: 2rem;
+}
+i:hover span, i:focus span{
+    transform:scale(1) rotate(0);
+    opacity:1;
+}
+.fb{
+    color: #09c;
+}
+.Apropos{
+    display: flex;
+    flex-direction: column;
+}
+.Apropos a{
+    cursor: pointer;
+}
