@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 html{
-    font-family: "dancing" sans-serif;
+    font-family: "dancing", sans-serif;
     font-size: 62.5%;
 }
 .btn{
