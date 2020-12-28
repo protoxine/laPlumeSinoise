@@ -15,6 +15,9 @@ const openTxt = () =>{
 const openTxt2 = () =>{
     document.getElementById("text2").style.width="100%"
 }
+const openTxt3 = () =>{
+    document.getElementById("text3").style.width="100%"
+}
 const closeNav = () =>{
     document.getElementById("myNav").style.width="0%"
     document.querySelector(".btn").style.visibility="visible"
@@ -24,6 +27,9 @@ const closeTxt = () =>{
 }
 const closeTxt2 = () =>{
     document.getElementById("text2").style.width="0%"
+}
+const closeTxt3 = () =>{
+    document.getElementById("text3").style.width="0%"
 }
 let lienNav = document.querySelectorAll(".overlay-content a")
     for (let i = 0; i < lienNav.length; i++) {
